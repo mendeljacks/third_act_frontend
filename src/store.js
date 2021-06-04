@@ -1,6 +1,6 @@
 import axios from 'axios';
-import {action, makeAutoObservable, observable, runInAction, toJS} from "mobx";
-import {get_loader_for_class_instance, setup_async_loaders} from './async_loaders';
+import {makeAutoObservable, runInAction} from "mobx";
+import {setup_async_loaders} from './async_loaders';
 
 class Store {
 
@@ -23,9 +23,9 @@ class Store {
         token: {}
     }
     get ready_to_submit() {
-        return !this.body.token.name 
-        || !store.body.name > 4 
-        || !/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.body.email)
+        return !this.body.token.name
+            || !store.body.name > 4
+            || !/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.body.email)
     }
 
     handle_submit = async () => {

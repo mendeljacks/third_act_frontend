@@ -1,16 +1,15 @@
-import {Button, CircularProgress, MenuItem, Select, Switch, TextField, Tooltip, Typography} from "@material-ui/core";
+import {Button, CircularProgress, Switch, TextField, Typography} from "@material-ui/core";
 import {action} from "mobx";
 import {observer} from "mobx-react-lite";
 import React from "react";
-import {get_loader_for_class_instance} from "./async_loaders";
 import {SearcherV2} from "./searcher_v2";
-import {store} from './store'
+import {store} from './store';
 
 const Form = observer(() => {
   return <>
     {store.body.token.name && <div style={{display: 'grid', placeItems: 'center'}}>
       <img style={{objectFit: 'contain', width: '300px', height: '300px'}} src={store.body.token.src} />
-      <Typography style={{padding: '10px'}}>Price: {store.body.token.tinybars / 1000000000} Hbar (~{(store.body.token.tinybars*0.226443/1000000000).toFixed(2)} USD)</Typography>
+      <Typography style={{padding: '10px'}}>Price: {store.body.token.tinybars / 1000000000} Hbar (~{(store.body.token.tinybars * 0.226443 / 1000000000).toFixed(2)} USD)</Typography>
 
     </div>}
     <h3>1. Select a token</h3>

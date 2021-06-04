@@ -1,7 +1,7 @@
 import {CircularProgress, TextField} from '@material-ui/core'
 import {Autocomplete, createFilterOptions} from '@material-ui/lab'
 import {observer} from 'mobx-react-lite'
-import {equals, identity} from 'ramda'
+import {identity} from 'ramda'
 import React from 'react'
 
 
@@ -54,7 +54,7 @@ const SearcherV2_ = ({
             renderOption={render_option}
             getOptionLabel={option => get_option_label(option) ?? ''}
             getOptionSelected={(option, test_value) => get_option_label(option) === get_option_label(test_value)}
-            value={equals(selected_option, {}) ? null : selected_option}
+            value={Object.keys(selected_option).length === 0 ? null : selected_option}
             onChange={(e, option) => {
                 set_selected_option(option ?? {})
             }}
@@ -98,7 +98,7 @@ const SearcherV2_ = ({
                     }
 
                     const option_filter = options_are_prefiltered
-                        ? identity
+                        ? () => {}
                         : raw_options => filterOptions(raw_options, {
                             inputValue: input_value,
                             getOptionLabel: option => (get_option_label(option) ?? '')
