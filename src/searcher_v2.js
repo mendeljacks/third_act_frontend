@@ -1,7 +1,6 @@
 import {CircularProgress, TextField} from '@material-ui/core'
 import {Autocomplete, createFilterOptions} from '@material-ui/lab'
 import {observer} from 'mobx-react-lite'
-import {identity} from 'ramda'
 import React from 'react'
 
 
@@ -116,7 +115,7 @@ const SearcherV2_ = ({
                 }
             }}
             filterOptions={options_are_prefiltered
-                ? identity
+                ? () => {}
                 : filterOptions
             }
         />
