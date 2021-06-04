@@ -8,7 +8,7 @@ import {store} from './store';
 const Form = observer(() => {
   return <>
     {store.body.token.name && <div style={{display: 'grid', placeItems: 'center'}}>
-      <img style={{objectFit: 'contain', width: '300px', height: '300px'}} src={store.body.token.src} />
+      <img alt="token" style={{objectFit: 'contain', width: '300px', height: '300px'}} src={store.body.token.src} />
       <Typography style={{padding: '10px'}}>Price: {store.body.token.tinybars / 1000000000} Hbar (~{(store.body.token.tinybars * 0.226443 / 1000000000).toFixed(2)} USD)</Typography>
 
     </div>}

@@ -34,9 +34,8 @@ class Store {
             console.log(body)
             // const {data} = await axios.post('https://hederata.herokuapp.com/token', body)
             const url = window.location.href === "http://localhost:3000/" ? 'http://localhost:3001/checkout' : 'https://hederata.herokuapp.com/checkout'
-            const {data} = await axios.post(url, body)
+            await axios.post(url, body)
 
-            // console.log(data)
             runInAction(() => {
                 this.success = true
             })
