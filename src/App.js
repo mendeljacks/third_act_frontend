@@ -21,9 +21,12 @@ const Form = observer(() => {
         store.body.token = o
       })}
       options={[
-        {name: "Herding Cats Attendee Ticket", symbol: 'TT', tinybars: 3 * 1000000000, src: 'http://drive.google.com/uc?export=view&id=1ivtojSSA9y0ETVlNXie_etCBIOARZTv5'},
-        {name: "Orange", symbol: 'TT', tinybars: 1 * 1000000000, src: 'https://media.istockphoto.com/photos/orange-picture-id185284489?k=6&m=185284489&s=612x612&w=0&h=x_w4oMnanMTQ5KtSNjSNDdiVaSrlxM4om-3PQTIzFaY='},
-        {name: "Banana", symbol: 'TT', tinybars: 4 * 1000000000, src: 'https://cdn.mos.cms.futurecdn.net/42E9as7NaTaAi4A6JcuFwG-1200-80.jpg'}
+        {name: "Herding Cats Attendee Ticket", symbol: 'HCAT', tinybars: 3 * 1000000000, src: 'http://drive.google.com/uc?export=view&id=1ivtojSSA9y0ETVlNXie_etCBIOARZTv5'},
+        {name: "Michael's Headset", symbol: 'HCMH', tinybars: 1 * 1000000000, src: 'http://drive.google.com/uc?export=view&id=1nJtatWv_Cd9jZgCe249PvLfHyWhxPUFo'},
+        {name: "The Final Bow", symbol: 'TFB', tinybars: 5 * 1000000000, src: 'http://drive.google.com/uc?export=view&id='},
+        {name: "Jassa Show Art", symbol: 'JSA', tinybars: 4 * 1000000000, src: 'https://cdn.mos.cms.futurecdn.net/42E9as7NaTaAi4A6JcuFwG-1200-80.jpg'},
+        {name: "Greg Show Art", symbol: 'GSA', tinybars: 4 * 1000000000, src: 'http://drive.google.com/uc?export=view&id='},
+        {name: "Sophie Show Art", symbol: 'SSA', tinybars: 4 * 1000000000, src: 'http://drive.google.com/uc?export=view&id='},
       ]}
       options_are_prefiltered={false}
       render_option={o => o.name}
