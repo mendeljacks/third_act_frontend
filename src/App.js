@@ -23,10 +23,9 @@ const Form = observer(() => {
       options={[
         {name: "Herding Cats Attendee Ticket", symbol: 'HCAT', tinybars: 3 * 1000000000, src: 'http://drive.google.com/uc?export=view&id=1ivtojSSA9y0ETVlNXie_etCBIOARZTv5'},
         {name: "Michael's Headset", symbol: 'HCMH', tinybars: 1 * 1000000000, src: 'http://drive.google.com/uc?export=view&id=1nJtatWv_Cd9jZgCe249PvLfHyWhxPUFo'},
-        {name: "The Final Bow", symbol: 'TFB', tinybars: 5 * 1000000000, src: 'http://drive.google.com/uc?export=view&id='},
-        {name: "Jassa Show Art", symbol: 'JSA', tinybars: 4 * 1000000000, src: 'https://cdn.mos.cms.futurecdn.net/42E9as7NaTaAi4A6JcuFwG-1200-80.jpg'},
-        {name: "Greg Show Art", symbol: 'GSA', tinybars: 4 * 1000000000, src: 'http://drive.google.com/uc?export=view&id='},
-        {name: "Sophie Show Art", symbol: 'SSA', tinybars: 4 * 1000000000, src: 'http://drive.google.com/uc?export=view&id='},
+        {name: "Jassa Show Art", symbol: 'JSA', tinybars: 4 * 1000000000, src: 'http://drive.google.com/uc?export=view&id=1Nrs8jX8jk9IiUZ__hbfXh4yUEMnKUhwE'},
+        {name: "Greg Show Art", symbol: 'GSA', tinybars: 4 * 1000000000, src: 'http://drive.google.com/uc?export=view&id=1Pq2gDHE0zaQ7rgJYW9AVVc-axzJJzz2U'},
+        {name: "Sophie Show Art", symbol: 'SSA', tinybars: 4 * 1000000000, src: 'http://drive.google.com/uc?export=view&id=1AMkQEhPvYrBC3gUbuLkhPI5XJudj8pAV'}
       ]}
       options_are_prefiltered={false}
       render_option={o => o.name}
