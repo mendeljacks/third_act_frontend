@@ -2,7 +2,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    background-image: url("BG.png");
+    background-image: url("BG.jpg");
     background-color: black;
     display: grid;
     place-items: center;
