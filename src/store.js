@@ -1,4 +1,3 @@
-import { Checkbox } from '@material-ui/core';
 import axios from 'axios';
 import {makeAutoObservable, runInAction} from "mobx";
 import {setup_async_loaders} from './async_loaders';

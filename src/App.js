@@ -85,6 +85,7 @@ const Form = observer(() => {
         fontSize: '95%'
       }}>
     <Checkbox
+        disabled={store.ready_to_submit}
         color="primary"
         inputProps={{ 'aria-label': 'secondary checkbox' }}
       />
