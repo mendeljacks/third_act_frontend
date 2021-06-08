@@ -85,7 +85,6 @@ const Form = observer(() => {
         fontSize: '95%'
       }}>
     <Checkbox
-        disabled={store.ready_to_submit}
         color="primary"
         inputProps={{ 'aria-label': 'secondary checkbox' }}
       />
@@ -114,7 +113,7 @@ export const App = observer(() => {
     <div style={{borderRadius: '20px', padding: '20px', backgroundColor: 'white', display: 'grid', gap: '15px', width: '500px', placeItems: 'center'}}>
       {!store.success && <h1 style={{fontWeight: 'bold'}}>Checkout</h1>}
       {!store.success && <Form />}
-      {store.success && <h1 style={{fontWeight: 'bold'}}>Bravo!</h1>}
+      {store.success && <h1 style={{fontWeight: 'bold'}}>Order Confirmed</h1>}
       {store.success && 'Your NFT is being held. A member of the Third Act team will be in touch shortly to finalize your purchase and assist with the set up of your wallet if needed. Due to the influx of demand please allow for 48 hours to return your message.'}
       {store.success && <Button variant='outlined' onClick={() => window.location.reload()}>Back</Button>}
 
