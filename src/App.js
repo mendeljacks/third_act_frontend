@@ -1,4 +1,4 @@
-import {Button, CircularProgress, Switch, TextField, Typography, Checkbox, Link} from "@material-ui/core";
+import {Button, CircularProgress, TextField, Typography, Checkbox, Link} from "@material-ui/core";
 import {action} from "mobx";
 import {observer} from "mobx-react-lite";
 import React from "react";
