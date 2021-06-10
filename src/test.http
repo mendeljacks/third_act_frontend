@@ -1,0 +1,16 @@
+
+POST http://hederata.herokuapp.com/token
+Content-Type: application/json
+
+# {
+#     "customer_account_id": 234,
+#     "customer_private_key": "3000202020202002002",
+#     "tinybars": 1,
+#     "net": "test",
+#     "token": {
+#         "name": "My new token",
+#         "symbol": "TT",
+#         "initial_supply": 3
+#     }
+
+# }

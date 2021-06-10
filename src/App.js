@@ -60,7 +60,7 @@ const Form = observer(() => {
       variant='outlined'
       label='Email'
     />
-    <h3>3. Crypto Account</h3>
+    {/* <h3>3. Crypto Account</h3>
     <div>
       I have an Hbar wallet
       <Switch value={store.hedera_account} onChange={action(e => store.hedera_account = e.target.checked)} />
@@ -80,14 +80,14 @@ const Form = observer(() => {
         // helperText="Hedera account ID comes from the wallet"
         variant='outlined'
         label='Hedera Private Key'
-      /></>}
+      /></>} */}
     <div style={{
         fontSize: '95%'
       }}>
     <Checkbox
-        disabled={store.ready_to_submit}
+        checked={store.agree_to_terms}
+        onChange={action(e => store.agree_to_terms = e.target.checked)}
         color="primary"
-        inputProps={{ 'aria-label': 'secondary checkbox' }}
       />
      I agree to the Third Act <Link href="https://www.thirdact.digital/terms-and-conditions">
       Terms of Service
