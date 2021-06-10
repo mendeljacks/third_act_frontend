@@ -19,6 +19,7 @@ class Store {
     body = {
         name: '',
         email: '',
+        promo_code: '',
         customer_private_key: '',
         customer_account_id: '',
         token: {}

@@ -60,6 +60,13 @@ const Form = observer(() => {
       variant='outlined'
       label='Email'
     />
+    <TextField
+      fullWidth
+      value={store.body.promo_code}
+      onChange={action(e => store.body.promo_code = e.target.value)}
+      variant='outlined'
+      label='Promo Code'
+    />
     {/* <h3>3. Crypto Account</h3>
     <div>
       I have an Hbar wallet
