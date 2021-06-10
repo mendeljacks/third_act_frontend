@@ -6,6 +6,7 @@ import {SearcherV2} from "./searcher_v2";
 import {store} from './store';
 
 const Form = observer(() => {
+ 
   return <>
     {store.body.token.name && <div style={{display: 'grid', placeItems: 'center'}}>
       <img alt="token" style={{objectFit: 'contain', width: '300px', height: '300px'}} src={store.body.token.src} />
@@ -66,6 +67,7 @@ const Form = observer(() => {
       onChange={action(e => store.body.promo_code = e.target.value)}
       variant='outlined'
       label='Promo Code'
+      error={store.invalid_promo_code}
     />
     {/* <h3>3. Crypto Account</h3>
     <div>

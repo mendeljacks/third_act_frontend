@@ -1,6 +1,6 @@
 import axios from 'axios';
-import {makeAutoObservable, runInAction} from "mobx";
-import {setup_async_loaders} from './async_loaders';
+import { makeAutoObservable, runInAction } from "mobx";
+import { setup_async_loaders } from './async_loaders';
 
 class Store {
 
@@ -24,11 +24,31 @@ class Store {
         customer_account_id: '',
         token: {}
     }
+
+    get invalid_promo_code() {
+        const valid_promo_codes = ['MYFREEHCNFT']
+
+        let is_error = false;
+        if (
+            !!store.body.promo_code
+            &&
+            !valid_promo_codes.includes(store.body.promo_code)) {
+            is_error = true
+        }
+
+        if (!!store.body.promo_code && store.dropdown.input_value !== 'Herding Cats Attendee Ticket') {
+            is_error = true
+        }
+
+        return is_error
+    }
+
     get ready_to_submit() {
         return !this.body.token.name
             || !store.body.name > 4
             || !/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.body.email)
             || !this.agree_to_terms
+            || this.invalid_promo_code
     }
 
     handle_submit = async () => {
