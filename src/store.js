@@ -11,6 +11,7 @@ class Store {
 
     success = false
     hedera_account = false
+    agree_to_terms = false
     dropdown = {
         input_value: '',
         is_open: false
@@ -26,6 +27,7 @@ class Store {
         return !this.body.token.name
             || !store.body.name > 4
             || !/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.body.email)
+            || !this.agree_to_terms
     }
 
     handle_submit = async () => {
