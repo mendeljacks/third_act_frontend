@@ -5,6 +5,12 @@ import React from "react";
 import {SearcherV2} from "./searcher_v2";
 import {store} from './store';
 
+async function handleEnable() {
+  const hexStatus = await window.hex.enable();
+  const response = JSON.parse(hexStatus);
+  console.dir(response);
+}
+
 const Form = observer(() => {
  
   return <>
@@ -104,6 +110,8 @@ const Form = observer(() => {
       Privacy Policy
     </Link>
     </div>
+
+    <Button variant='outlined' onClick={handleEnable}>Enable HEX</Button>
 
     <Button
       disabled={store.ready_to_submit}
